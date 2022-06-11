@@ -57,7 +57,7 @@ export const Customer = () => {
         <div className="container">
           <div className="py-4">
             <ToastContainer  transition={Flip} ></ToastContainer>
-            <div className="row">
+            <div className="containeraddUser">
             <Link to="/Customer/Add" title="Nuevo cliente">
                 <FontAwesomeIcon icon={faUserPlus} size='2x' ></FontAwesomeIcon>
               </Link>

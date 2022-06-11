@@ -21,7 +21,7 @@ export const EditCustomer = () => {
 
     const { id, firstName, secondName, firstLastName, secondLastName, identification, isActive } = customer
     const onInputChange = e => { setCustomer({ ...customer, [e.target.name]: e.target.value }) }
-
+    
     useEffect(() => {
         listCustomer()
     }, [])
@@ -58,7 +58,7 @@ export const EditCustomer = () => {
     return (
         <>
             <div className='container py-3'>
-                <div className='w-70 mx-auto shadow p-5'>
+                <div className='w-70 mx-auto shadow-lg p-3 mb-5 bg-white rounded'>
                     <ToastContainer transition={Flip} />
                     <h4 className='text-center mb-4'>Editar cliente</h4>
                     <form onSubmit={e => onSubmit(e)}>

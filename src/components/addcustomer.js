@@ -40,7 +40,7 @@ export const AddCustomer = () => {
     return (
         <>
         <div className='container py-3'>
-            <div className='w-70 mx-auto shadow p-5'>
+            <div className='w-70 mx-auto shadow-lg p-3 mb-5 bg-white rounded'>
                 <h4 className='text-center mb-4'>Nuevo cliente</h4>
                 <ToastContainer  transition={Flip}></ToastContainer>
                 <form onSubmit={e => onSubmit(e)}>

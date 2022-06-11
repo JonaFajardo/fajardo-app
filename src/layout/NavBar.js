@@ -7,7 +7,7 @@ export const NavBar = () => {
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/">Inicio</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/Home">Inicio</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -18,8 +18,7 @@ export const NavBar = () => {
               <Nav.Link as={Link} to="/Reports">Reportes</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/Contacts">Contactos</Nav.Link>
-              <Nav.Link as={Link} to="/Login">Iniciar sesión</Nav.Link>
+              <Nav.Link as={Link} to="/Loginout">Cerrar sesión</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
