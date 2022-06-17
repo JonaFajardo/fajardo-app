@@ -4,8 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import useAuth from "../auth/useAuth";
+
 
 export const Login = (props) => {
+
+
+  const auth = useAuth();
   
   let navigate = useNavigate();
   const baseUrl="https://localhost:7155/api/Login";
@@ -37,7 +42,7 @@ const [form, setForm]=useState({
         cookies.set('username', respuesta.userName, {path: '/'});
         cookies.set('password', respuesta.password, {path: '/'});
         alert("Bienvenido: "+respuesta.name+" "+respuesta.lastName);
-        navigate('/');
+        auth.login(props)
       }else{
         alert('El usuario o la contraseña no son correctos');
       }

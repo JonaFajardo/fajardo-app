@@ -1,39 +1,37 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './layout/NavBar'
-import Contact from './components/contact'
-import Customer from './components/customer'
-import Home from './components/home'
-import Login from './components/login'
-import Maintenance from './components/maintenance'
-import Mechanical from './components/mechanical'
-import Report from './components/report'
-import Vehicle from './components/vehicle'
-import PageNotFound from './components/pagenotfound';
-import { AddCustomer } from './components/addcustomer';
-import { EditCustomer } from './components/editcustomer';
+import Home from './components/Home'
+import Contact from './components/Contact'
+import Customer from './components/Customer'
+import AddCustomer from './components/AddCustomer';
+import EditCustomer from './components/EditCustomer';
+import Login from './components/Login'
+import Report from './components/Report'
 
-function App() {
-
+function App(props) {
+  console.log(props)
   return (
     <div className='App'>
+
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<NavBar />}>
+
+
             <Route index element={<Home />} />
             <Route path='Contacts' element={<Contact />} />
-            <Route path='Customers' element={<Customer />} />
             <Route path='Login' element={<Login />} />
-            <Route path='Maintenance' element={<Maintenance />} />
-            <Route path='Mechanics' element={<Mechanical />} />
-            <Route path='Reports' element={<Report />} />
-            <Route path='Vehicles' element={<Vehicle />} />
+
+            <Route path='Customers' element={<Customer />} />
             <Route path='Customer/Add' element={<AddCustomer />} />
             <Route path='Customer/Edit/:idReg' element={<EditCustomer />} />
-            <Route path='*' element={<PageNotFound/>} />
+            <Route path='Reports' element={<Report />} />
+
           </Route>
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }

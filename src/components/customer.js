@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import { listCustomer } from "../functions/customerCrud";
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,7 +25,7 @@ export const Customer = () => {
   const deletefn = (id) => {
     confirmAlert({
       title: 'Borrar datos',
-      message: 'Esta seguro de eliminar los datos?',
+      message: '¿Esta seguro de eliminar los datos?',
       buttons: [
         {
           label: 'Yes',
